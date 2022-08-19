@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./Images/opac.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-color: #fdf3c65e;
+
+}
+
+.content {
+  text-align: center;
+  padding: 50px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 20px;
+
+}
+
+p {
+  color: rgb(102, 52, 56);
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  color: transparent;
+  background: #000000;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+input {
+  font-size: 20px;
+  height: 60px;
+  width: 300px;
+  padding: 10px 20px;
+  
+  margin: 20px;
+  outline: none;
+  border-radius: 10px;
+  border: 0.2px solid rgba(128, 128, 128, 0.411);
+  -webkit-box-shadow: 5px 5px 5px 0px #ff8686, inset 4px 4px 15px 0px #000000, 1px 8px 50px 50px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #ff868670, inset 4px 4px 15px 0px #2fc4ff79, 1px 8px 50px 50px rgba(0, 0, 0, 0);
+}
+
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  /* width: 250px; */
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+.displayRes {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #f30d0d;
+}
+
+.naslov {
+  margin-bottom: 40px;
+  color: transparent;
+  background: #ac1c1c;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+.message{
+  color: #000000;
+  margin: 30px;
+  font-size: 30px;
+}
+
+@media screen and (max-width:500px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+  }
+
+  .content {
+    padding: 50px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 20px;
+
+  }
+
+  p {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  input {
+    height: 50px;
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+    outline: none;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .displayRes {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    font-size: 50px;
+  }
+}
