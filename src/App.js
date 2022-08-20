@@ -10,6 +10,22 @@ function App() {
 
   const [weight, setWeight] = useState("");
 
+
+  // const drinks = [
+  //   {
+  //     image: 'sdfhgghsdhsdhgh',
+  //     volume: 0.5,
+  //     percent: 5
+  //   }
+  // ];
+
+  // const svaPica = [];
+  // svaPica.push({
+  //   amount: 1,
+  //   volume: 0.5,
+  //   percent: 5
+  // });
+
   function changeHandler(event) {
     setAmount(event.target.value);
   }
@@ -22,16 +38,29 @@ function App() {
     setWeight(event.target.value);
   }
 
-  const res = () => (amount * percent * 0.75 / weight).toFixed(2);
+  const res = () => {
 
-  let status = (amount * percent * 0.75 / weight).toFixed(2);
+    if (amount !== undefined && percent !== undefined && weight)
+    {
+      return (amount * percent * 0.75 / weight).toFixed(2) + "‰";
+    }
+
+    return "";
+  }
+
+  let status = (amount * percent * 0.75 / weight);
 
   function message() {
 
-    if (status > 0.3) {
+    if (isNaN(status) || status === Infinity )
+    {
+      return "";
+    }
+
+    if (status >= 0.2) {
       return "Put nastavi taksijem, autobusom ili peske"
-    } else if (status < 0.3) {
-      return "Mozes da vozis "
+    } else {
+      return "Mozes da vozis"
     }
   }
 
@@ -46,8 +75,8 @@ function App() {
         <input type="number" value={percent} onChange={percents} placeholder="%"></input>
         <p>TEŽINA</p>
         <input type="number" value={weight} onChange={weights} placeholder="kg"></input>
-        <div className='displayRes'>{res()}<span>&#8240;</span></div>
-        <button className="button-30" onClick={res()}>Izračunaj</button>
+        <div className='displayRes'>{res()}</div>
+        {/* <button className="button-30" onClick={res()}>Izračunaj</button> */}
         {status > 0.3 ? <div id="message2">{message()}</div> : <div className='message'>{message()}</div>}
       </div>
       </div>
