@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 import drinks from "./Images/opac.png"
+import wine from "../src/Images/wine.png"
+import beer from "../src/Images/beer.png"
+import wiskey from "../src/Images/wiskey.png"
+import rakia from "../src/Images/rakia.png"
+
 
 function App() {
 
@@ -25,6 +30,33 @@ function App() {
   //   volume: 0.5,
   //   percent: 5
   // });
+
+  const drinks = [
+    {
+        image: wine,
+        amount: 1,
+        volume: 140,
+        percent: 12,
+    },
+    {
+        image: beer,
+        amount: 1,
+        volume: 500,
+        percent: 5,
+    },
+    {
+        image: wiskey,
+        amount: 1,
+        volume: 60,
+        percent: 40,
+    },
+    {
+        image: rakia,
+        amount: 1,
+        volume: 300,
+        percent: 45,
+    }
+]
 
   function changeHandler(event) {
     setAmount(event.target.value);
